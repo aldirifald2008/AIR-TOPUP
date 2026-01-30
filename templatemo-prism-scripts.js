@@ -10,59 +10,6 @@ https://templatemo.com/tm-600-prism-flux
 
 
 // Portfolio data for carousel
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-.hero {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.carousel-container {
-    width: 100%;
-    height: 100%;
-    max-width: 100vw;
-    overflow: hidden;
-}
-
-.carousel {
-    width: 100%;
-    height: 100%;
-}
-.header {
-    width: 100%;
-    max-width: 100vw;
-}
-@media (max-width: 768px) {
-    .hero {
-        padding: 20px;
-    }
-
-    .carousel-btn {
-        font-size: 24px;
-        padding: 10px;
-    }
-
-    .logo-text {
-        font-size: 16px;
-    }
-}
-.loader {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-}
-img, canvas, video {
-    max-width: 100%;
-    height: auto;
-}
         const portfolioData = [
             {
                 id: 1,
