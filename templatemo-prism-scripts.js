@@ -16,7 +16,7 @@ https://templatemo.com/tm-600-prism-flux
                 title: 'Mobile Legend',
                 description: 'Game MOBA 5v5 yang mengandalkan kerja tim dan strategi. Pemain memilih hero dengan role berbeda untuk menghancurkan base lawan.',
                 slug:'ML',
-                image: 'images/ML.jpeg',
+                image: 'ML.jpeg',
                 tech: ['MOBA', 'STRATEGY', 'MULTIPLAYER']
             },
             {
@@ -24,7 +24,7 @@ https://templatemo.com/tm-600-prism-flux
                 title: 'Free Fire',
                 description: 'Game battle royale cepat di mana pemain bertahan hidup melawan banyak musuh di arena kecil dengan senjata dan karakter unik.',
                 slug:'FF',
-                image: 'images/FF.jpeg',
+                image: 'FF.jpeg',
                 tech: ['BATTLE ROYALE', 'ACTION', 'MULTIPLAYER']
             },
             {
@@ -32,7 +32,7 @@ https://templatemo.com/tm-600-prism-flux
                 title: 'PUBG MOBILE',
                 description: 'Game battle royale realistis di mana pemain mendarat di map luas, mencari loot, dan bertahan hingga menjadi yang terakhir.',
                 slug:'PUBG',
-                image: 'images/PUBG.jpeg',
+                image: 'PUBG.jpeg',
                 tech: ['BATTLE ROYALE', 'ACTION', 'MULTIPLAYER']
             },
             {
@@ -40,7 +40,7 @@ https://templatemo.com/tm-600-prism-flux
                 title: 'Call Of Duty',
                 description: 'Game FPS dengan mode multiplayer dan battle royale. Menawarkan grafis realistis, senjata modern, dan gameplay kompetitif.',
                 slug:'COD',
-                image: 'images/COD.jpeg',
+                image: 'COD.jpeg',
                 tech: ['BATTLE ROYALE', 'FPS', 'REALISTIC']
             },
             {
@@ -48,7 +48,7 @@ https://templatemo.com/tm-600-prism-flux
                 title: 'Honor Of King',
                 description: 'Game MOBA populer dengan gaya visual khas dan gameplay strategis. Mengutamakan kerja sama tim dan penguasaan hero.',
                 slug:'HOK',
-                image: 'images/HOK.jpeg',
+                image: 'HOK.jpeg',
                 tech: ['MOBA', 'STRATEGY', 'MULTIPLAYER']
             },
             {
@@ -56,7 +56,7 @@ https://templatemo.com/tm-600-prism-flux
                 title: 'ROBLOX',
                 description: 'Platform game kreatif yang berisi ribuan game buatan pemain. Pengguna juga bisa membuat game sendiri dan berinteraksi secara online.',
                 slug:'ROBLOX',
-                image: 'images/ROBLOX.jpeg',
+                image: 'ROBLOX.jpeg',
                 tech: ['CASUAL', 'SIMULATION', 'MULTIPLAYER']
             },
             {
@@ -64,7 +64,7 @@ https://templatemo.com/tm-600-prism-flux
                 title: 'FC MOBILE',
                 description: 'Game sepak bola resmi dari EA yang memungkinkan pemain membangun tim impian, bertanding, dan mengelola klub secara online.',
                 slug:'FC',
-                image: 'images/EA FC.jpeg',
+                image: 'EA FC.jpeg',
                 tech: ['SPORT', 'PVP', 'FOOTBALL']
             }
         ];
