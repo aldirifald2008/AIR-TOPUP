@@ -15,49 +15,56 @@ https://templatemo.com/tm-600-prism-flux
                 id: 1,
                 title: 'Mobile Legend',
                 description: 'Game MOBA 5v5 yang mengandalkan kerja tim dan strategi. Pemain memilih hero dengan role berbeda untuk menghancurkan base lawan.',
-                image: 'ML.jpeg',
+                slug:'ML',
+                image: 'images/ML.jpeg',
                 tech: ['MOBA', 'STRATEGY', 'MULTIPLAYER']
             },
             {
                 id: 2,
                 title: 'Free Fire',
                 description: 'Game battle royale cepat di mana pemain bertahan hidup melawan banyak musuh di arena kecil dengan senjata dan karakter unik.',
-                image: 'FF.jpeg',
+                slug:'FF',
+                image: 'images/FF.jpeg',
                 tech: ['BATTLE ROYALE', 'ACTION', 'MULTIPLAYER']
             },
             {
                 id: 3,
                 title: 'PUBG MOBILE',
                 description: 'Game battle royale realistis di mana pemain mendarat di map luas, mencari loot, dan bertahan hingga menjadi yang terakhir.',
-                image: 'PUBG.jpeg',
+                slug:'PUBG',
+                image: 'images/PUBG.jpeg',
                 tech: ['BATTLE ROYALE', 'ACTION', 'MULTIPLAYER']
             },
             {
                 id: 4,
                 title: 'Call Of Duty',
                 description: 'Game FPS dengan mode multiplayer dan battle royale. Menawarkan grafis realistis, senjata modern, dan gameplay kompetitif.',
-                image: 'COD.jpeg',
+                slug:'COD',
+                image: 'images/COD.jpeg',
                 tech: ['BATTLE ROYALE', 'FPS', 'REALISTIC']
             },
             {
                 id: 5,
                 title: 'Honor Of King',
                 description: 'Game MOBA populer dengan gaya visual khas dan gameplay strategis. Mengutamakan kerja sama tim dan penguasaan hero.',
-                image: 'HOK.jpeg',
+                slug:'HOK',
+                image: 'images/HOK.jpeg',
                 tech: ['MOBA', 'STRATEGY', 'MULTIPLAYER']
             },
             {
                 id: 6,
                 title: 'ROBLOX',
                 description: 'Platform game kreatif yang berisi ribuan game buatan pemain. Pengguna juga bisa membuat game sendiri dan berinteraksi secara online.',
-                image: 'ROBLOX.jpeg',
+                slug:'ROBLOX',
+                image: 'images/ROBLOX.jpeg',
                 tech: ['CASUAL', 'SIMULATION', 'MULTIPLAYER']
             },
             {
                 id: 7,
                 title: 'FC MOBILE',
                 description: 'Game sepak bola resmi dari EA yang memungkinkan pemain membangun tim impian, bertanding, dan mengelola klub secara online.',
-                image: 'EA FC.jpeg',
+                slug:'FC',
+                image: 'images/EA FC.jpeg',
                 tech: ['SPORT', 'PVP', 'FOOTBALL']
             }
         ];
@@ -111,6 +118,47 @@ https://templatemo.com/tm-600-prism-flux
         const carousel = document.getElementById('carousel');
         const indicatorsContainer = document.getElementById('indicators');
 
+let startX = 0;
+let isDragging = false;
+const swipeThreshold = 50;
+
+// ===== TOUCH =====
+carousel.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+});
+
+carousel.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const diff = startX - e.touches[0].clientX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+        diff > 0 ? nextSlide() : prevSlide();
+        isDragging = false;
+    }
+});
+
+carousel.addEventListener('touchend', () => isDragging = false);
+
+// ===== MOUSE =====
+carousel.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+    isDragging = true;
+});
+
+carousel.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const diff = startX - e.clientX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+        diff > 0 ? nextSlide() : prevSlide();
+        isDragging = false;
+    }
+});
+
+carousel.addEventListener('mouseup', () => isDragging = false);
+carousel.addEventListener('mouseleave', () => isDragging = false);
+
         function createCarouselItem(data, index) {
             const item = document.createElement('div');
             item.className = 'carousel-item';
@@ -129,7 +177,7 @@ https://templatemo.com/tm-600-prism-flux
                     <h3 class="card-title">${data.title}</h3>
                     <p class="card-description">${data.description}</p>
                     <div class="card-tech">${techBadges}</div>
-                    <button class="card-cta" onclick="window.location.href='topup.html'">Top Up</button>
+                    <button class="card-cta" data-game="${data.slug}">Top Up</button>
                 </div>
             `;
             
@@ -233,6 +281,8 @@ https://templatemo.com/tm-600-prism-flux
                 }
             });
             
+            
+            
             // Update indicators
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentIndex);
@@ -306,6 +356,12 @@ https://templatemo.com/tm-600-prism-flux
         // Auto-rotate carousel
         setInterval(nextSlide, 5000);
 
+document.addEventListener('click', e => {
+  if (e.target.classList.contains('card-cta')) {
+    const game = e.target.dataset.game;
+    window.location.href = `topup.html?game=${game}`;
+  }
+});
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') prevSlide();
