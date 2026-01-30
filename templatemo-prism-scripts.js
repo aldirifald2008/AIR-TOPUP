@@ -59,7 +59,10 @@ html, body {
     width: 100vw;
     height: 100vh;
 }
-
+img, canvas, video {
+    max-width: 100%;
+    height: auto;
+}
         const portfolioData = [
             {
                 id: 1,
