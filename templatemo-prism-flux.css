@@ -55,7 +55,8 @@ https://templatemo.com/tm-600-prism-flux
     color: #000;
 }
 
-html, body {
+
+html, body {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -1720,4 +1721,24 @@ a.info-item {
 		gap: 20px;
 		text-align: center;
 	}
+	/* === REMOVE ANDROID BLUE TAP HIGHLIGHT === */
+html, body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a, button, div, label, span, input {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+ a:active,
+.card:active,
+button:active {
+    transform: scale(0.97);
+    opacity: 0.85;
+}
+ a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+    text-decoration: none;
+}
 }
