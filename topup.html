@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PRISM FLUX - Top Up</title>
 
-<link rel="stylesheet" href="templatemo-prism-flux.css">
+<link rel="stylesheet" href="AIR SHOP.css">
 
 <style>
 /* ===== TOP UP PAGE CUSTOM ===== */
@@ -113,9 +113,17 @@
 
 <header class="header" id="header">
 <nav class="nav-container">
-<a href="index.html" class="logo">
-<span class="logo-text"><span class="prism">AIR</span> <span class="flux">SHOP</span></span>
-</a>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-prism">
+                        <div class="prism-shape"></div>
+                    </div>
+                </div>
+                <span class="logo-text">
+                    <span class="prism">AIR</span>
+                    <span class="flux">SHOP</span>
+                </span>
+            </a>
 </nav>
 </header>
 
@@ -156,10 +164,10 @@
     </div>
     <div class="payment-body">
         <label class="pay-option">
-            <input type="radio" name="payment">
-            <span class="badge">QRIS</span>
-            <span>All Payment</span>
-        </label>
+    <input type="radio" name="payment">
+    <div class="pay-icon icon-qris">QRIS</div>
+    <span>QRIS (All Payment)</span>
+</label>
     </div>
 
     <div class="payment-header" onclick="togglePay(this)">
@@ -168,20 +176,22 @@
     </div>
     <div class="payment-body">
         <label class="pay-option">
-            <input type="radio" name="payment">
-            <span class="badge">DANA</span>
-            <span>DANA</span>
-        </label>
-        <label class="pay-option">
-            <input type="radio" name="payment">
-            <span class="badge">GOPAY</span>
-            <span>GoPay</span>
-        </label>
-        <label class="pay-option">
-            <input type="radio" name="payment">
-            <span class="badge">SHOPEE</span>
-            <span>ShopeePay</span>
-        </label>
+    <input type="radio" name="payment">
+    <div class="pay-icon icon-dana">DANA</div>
+    <span>DANA</span>
+</label>
+
+<label class="pay-option">
+    <input type="radio" name="payment">
+    <div class="pay-icon icon-gopay">GOPAY</div>
+    <span>GoPay</span>
+</label>
+
+<label class="pay-option">
+    <input type="radio" name="payment">
+    <div class="pay-icon icon-shopee">SPAY</div>
+    <span>ShopeePay</span>
+</label>
     </div>
 
     <div class="payment-header" onclick="togglePay(this)">
@@ -190,15 +200,16 @@
     </div>
     <div class="payment-body">
         <label class="pay-option">
-            <input type="radio" name="payment">
-            <span class="badge">ALFA</span>
-            <span>Alfamart</span>
-        </label>
-        <label class="pay-option">
-            <input type="radio" name="payment">
-            <span class="badge">INDO</span>
-            <span>Indomaret</span>
-        </label>
+    <input type="radio" name="payment">
+    <div class="pay-icon icon-alfa">ALFA</div>
+    <span>Alfamart</span>
+</label>
+
+<label class="pay-option">
+    <input type="radio" name="payment">
+    <div class="pay-icon icon-indo">INDO</div>
+    <span>Indomaret</span>
+</label>
     </div>
 
     <div class="payment-header" onclick="togglePay(this)">
@@ -207,20 +218,22 @@
     </div>
     <div class="payment-body">
         <label class="pay-option">
-            <input type="radio" name="payment">
-            <span class="badge">BCA</span>
-            <span>BCA</span>
-        </label>
-        <label class="pay-option">
-            <input type="radio" name="payment">
-            <span class="badge">BNI</span>
-            <span>BNI</span>
-        </label>
-        <label class="pay-option">
-            <input type="radio" name="payment">
-            <span class="badge">BRI</span>
-            <span>BRI</span>
-        </label>
+    <input type="radio" name="payment">
+    <div class="pay-icon icon-bca">BCA</div>
+    <span>BCA Virtual Account</span>
+</label>
+
+<label class="pay-option">
+    <input type="radio" name="payment">
+    <div class="pay-icon icon-bni">BNI</div>
+    <span>BNI Virtual Account</span>
+</label>
+
+<label class="pay-option">
+    <input type="radio" name="payment">
+    <div class="pay-icon icon-bri">BRI</div>
+    <span>BRI Virtual Account</span>
+</label>
     </div>
 
 </div>
@@ -233,7 +246,7 @@ const gameData = {
     ML: {
         title: 'Mobile Legends',
         publisher: 'Moonton',
-        image: 'ML.jpeg',
+        image: 'images/ML.jpeg',
         nominals: [
             { d: '5 Diamonds', p: 'Rp 1.500' },
             { d: '12 Diamonds', p: 'Rp 3.500' },
@@ -257,7 +270,7 @@ const gameData = {
     FF: {
         title: 'Free Fire',
         publisher: 'Garena',
-        image: 'FF.jpeg',
+        image: 'images/FF.jpeg',
         nominals: [
             { d: '5 Diamonds', p: 'Rp 1.000' },
             { d: '12 Diamonds', p: 'Rp 2.000' },
@@ -278,7 +291,7 @@ const gameData = {
     PUBG: {
         title: 'PUBG Mobile',
         publisher: 'Tencent',
-        image: 'PUBG.jpeg',
+        image: 'images/PUBG.jpeg',
         nominals: [
             { d: '30 UC', p: 'Rp 8.000' },
             { d: '60 UC', p: 'Rp 15.000' },
@@ -295,7 +308,7 @@ const gameData = {
     ROBLOX: {
         title: 'ROBLOX',
         publisher: 'Roblox Corporation',
-        image: 'ROBLOX.jpeg',
+        image: 'images/ROBLOX.jpeg',
         nominals: [
             { d: '40 Robux', p: 'Rp 8.000' },
             { d: '80 Robux', p: 'Rp 15.000' },
@@ -310,7 +323,7 @@ const gameData = {
     HOK: {
         title: 'Honor of Kings',
         publisher: 'Tencent',
-        image: 'HOK.jpeg',
+        image: 'images/HOK.jpeg',
         nominals: [
             { d: '60 Tokens', p: 'Rp 15.000' },
             { d: '300 Tokens', p: 'Rp 75.000' },
@@ -324,7 +337,7 @@ const gameData = {
     FC: {
         title: 'FC Mobile',
         publisher: 'EA Sports',
-        image: 'EA FC.jpeg',
+        image: 'images/EA FC.jpeg',
         nominals: [
             { d: '100 FC Points', p: 'Rp 15.000' },
             { d: '250 FC Points', p: 'Rp 40.000' },
@@ -338,7 +351,7 @@ const gameData = {
     COD: {
         title: 'Call of Duty Mobile',
         publisher: 'TiMi Studios',
-        image: 'COD.jpeg',
+        image: 'images/COD.jpeg',
         nominals: [
             { d: '63 CP', p: 'Rp 15.000' },
             { d: '127 CP', p: 'Rp 30.000' },
@@ -359,14 +372,29 @@ document.getElementById('gameTitle').textContent = game.title;
 document.getElementById('gamePublisher').textContent = game.publisher;
 
 const grid = document.querySelector('.nominal-grid');
-game.nominals.forEach((n,i)=>{
+game.nominals.forEach((n, i) => {
     const div = document.createElement('div');
-    div.className = 'nominal-card' + (i===0?' active':'');
-    div.innerHTML = `<strong>${n.d}</strong><span>${n.p}</span>`;
-    div.onclick = ()=>{
-        document.querySelectorAll('.nominal-card').forEach(c=>c.classList.remove('active'));
+    div.className = 'nominal-card' + (i === 0 ? ' active' : '');
+
+    const isPack =
+        n.d.toLowerCase().includes('pass') ||
+        n.d.toLowerCase().includes('membership');
+
+    div.innerHTML = `
+        <span class="nominal-icon ${isPack ? 'icon-pack' : 'icon-diamond'}">
+            ${isPack ? '📦' : '💎'}
+        </span>
+        <strong>${n.d}</strong>
+        <div class="price">${n.p}</div>
+    `;
+
+    div.onclick = () => {
+        document
+            .querySelectorAll('.nominal-card')
+            .forEach(c => c.classList.remove('active'));
         div.classList.add('active');
     };
+
     grid.appendChild(div);
 });
 
